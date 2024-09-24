@@ -1,0 +1,54 @@
+body {
+    background-color: #f0e68c;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.envelope {
+    width: 200px;
+    height: 120px;
+    background: #fff;
+    border: 2px solid #ff6347;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card.open {
+    transform: translateY(0);
+}
+
+.confetti {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('confetti.png'); /* Replace with actual confetti image */
+    background-size: cover;
+}
+
+.confetti.show {
+    display: block; /* Show when triggered */
+}
