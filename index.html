@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure this path is correct -->
 </head>
 <body>
     <div class="envelope" onclick="openCard()">
         <div class="card">
             <h1>Joyeux Anniversaire!</h1>
             <p>Dear Nyembo,</p>
-            <p>I love you more than words can express. Your Congolese roots and the way you embrace your heritage inspire me daily. Your passion for Manchester United and futbol lights up your spirit, and your talent in music production amazes me.</p>
-            <p>Thank you for sharing your creativity in photography and videography, and for being a kind and nurturing soul. I cherish our dreams together, including your aspirations of owning a G-wagon and Ferrari Spider 488.</p>
-            <p>Let’s make beautiful memories together!</p>
-            <p>Love, Shanice</p>
-            <button onclick="playMusic()">🎵 Play My Playlist</button>
-            <button onclick="openGallery()">📸 View Memories</button>
+            <p>I love you more than words can express...</p>
+            <button class="button" onclick="playMusic()">🎵 Play My Playlist</button>
+            <button class="button" onclick="openGallery()">📸 View Memories</button>
         </div>
     </div>
-
     <div class="confetti" id="confetti"></div>
 
     <script>
         function openCard() {
-            document.querySelector('.card').classList.toggle('open');
+            const card = document.querySelector('.card');
+            card.classList.toggle('open');
             document.getElementById('confetti').classList.toggle('show');
         }
 
         function playMusic() {
-            window.open('https://link-to-playlist.com', '_blank'); // Replace with your playlist link
+            window.open('https://link-to-playlist.com', '_blank');
         }
 
         function openGallery() {
-            window.open('https://link-to-photo-gallery.com', '_blank'); // Replace with your gallery link
+            window.open('https://link-to-photo-gallery.com', '_blank');
         }
     </script>
 </body>
 </html>
+
 
 
 
