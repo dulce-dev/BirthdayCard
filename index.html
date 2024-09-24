@@ -4,48 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="envelope" id="envelope" onclick="openCard()">
-        <div class="front">
+    <div class="envelope" onclick="openCard()">
+        <div class="card">
             <h1>Joyeux Anniversaire!</h1>
-            <p>Dear Nyembo</p>
-        </div>
-        <div class="back">
-            <div class="card">
-                <h1>Joyeux Anniversaire!</h1>
-                <p>I love you more than words can express. Your Congolese roots and the way you embrace your heritage inspire me daily. Your passion for Manchester United and futbol lights up your spirit, and your talent in music production amazes me.</p>
-                <p>Thank you for sharing your creativity in photography and videography, and for being a kind and nurturing soul. I cherish our dreams together, including your aspirations of owning a G-wagon and Ferrari Spider 488.</p>
-                <p>Let’s make beautiful memories together!</p>
-                <p>Love, Shanice</p>
-                <button onclick="playMusic()">🎵 Play My Playlist</button>
-                <button onclick="openGallery()">📸 View Memories</button>
-            </div>
+            <p>Dear Nyembo,</p>
+            <p>I love you more than words can express. Your Congolese roots and the way you embrace your heritage inspire me daily. Your passion for Manchester United and futbol lights up your spirit, and your talent in music production amazes me.</p>
+            <p>Thank you for sharing your creativity in photography and videography, and for being a kind and nurturing soul. I cherish our dreams together, including your aspirations of owning a G-wagon and Ferrari Spider 488.</p>
+            <p>Let’s make beautiful memories together!</p>
+            <p>Love, Shanice</p>
+            <button onclick="playMusic()">🎵 Play My Playlist</button>
+            <button onclick="openGallery()">📸 View Memories</button>
         </div>
     </div>
+
     <div class="confetti" id="confetti"></div>
+
     <script>
         function openCard() {
-            const envelope = document.getElementById('envelope');
-            envelope.classList.toggle('open');
-            const confetti = document.getElementById('confetti');
-            if (envelope.classList.contains('open')) {
-                setTimeout(() => confetti.classList.add('show'), 500); // Show confetti after a delay
-            } else {
-                confetti.classList.remove('show');
-            }
+            document.querySelector('.envelope').classList.toggle('open');
+            document.getElementById('confetti').classList.toggle('show');
         }
+
         function playMusic() {
             window.open('https://link-to-playlist.com', '_blank'); // Replace with your playlist link
         }
+
         function openGallery() {
             window.open('https://link-to-photo-gallery.com', '_blank'); // Replace with your gallery link
         }
     </script>
 </body>
 </html>
+
 
 
 
