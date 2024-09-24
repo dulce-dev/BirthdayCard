@@ -10,7 +10,7 @@ body {
     border-radius: 10px;
     position: relative;
     cursor: pointer;
-    transition: transform 0.5s; /* Smooth transition for opening */
+    transition: transform 0.5s;
 }
 
 .card {
@@ -30,7 +30,7 @@ body {
 }
 
 .confetti {
-    background-image: url('https://dulce-dev.github.io/BirthdayCard/confetti.png');
+    background-image: url('confetti.png'); /* Ensure this matches your actual file name */
     width: 100px;
     height: 100px;
     position: absolute;
@@ -46,26 +46,6 @@ body {
     0% { transform: translateY(0); opacity: 1; }
     50% { transform: translateY(-30px); opacity: 1; }
     100% { transform: translateY(100px); opacity: 0; }
-}
-
-/* Additional styles to enhance the overall appearance */
-.card h1, .card p {
-    margin: 0; /* Remove default margins */
-    color: #333; /* Dark text for better readability */
-}
-
-.button {
-    background-color: #6c757d; /* Bootstrap gray */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px; /* Spacing between buttons */
-}
-
-.button:hover {
-    background-color: #5a6268; /* Darker gray on hover */
 }
 
 
