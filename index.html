@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link to Poppins and Pacifico fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
+
     <div class="envelope" onclick="openCard()">
         <div class="card">
             <h1>Joyeux Anniversaire!</h1>
@@ -19,7 +24,9 @@
             <button onclick="openGallery()">📸 View Memories</button>
         </div>
     </div>
+
     <div class="confetti" id="confetti"></div>
+
     <script>
         function openCard() {
             document.querySelector('.card').classList.toggle('open');
@@ -34,6 +41,7 @@
             window.open('https://link-to-photo-gallery.com', '_blank'); // Replace with your gallery link
         }
     </script>
+
 </body>
 </html>
 
