@@ -1,54 +1,84 @@
 body {
-    background-color: #f0e68c;
-    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light Cream background */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100vh; /* Center content vertically */
 }
 
 .envelope {
-    width: 200px;
-    height: 120px;
-    background: #fff;
-    border: 2px solid #ff6347;
+    width: 250px;
+    height: 180px;
+    background-color: #3B2B2B; /* Dark Chocolate Brown */
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
+    perspective: 1000px; /* Adds perspective for the 3D effect */
 }
 
-.envelope:hover {
-    transform: scale(1.05);
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when facing front */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.front {
+    background-color: #3B2B2B; /* Dark Chocolate Brown */
+    color: white;
+}
+
+.back {
+    background-color: white; /* White for the card */
+    transform: rotateY(180deg); /* Start flipped */
+    padding: 20px;
+}
+
+.envelope.open {
+    transform: rotateY(180deg) scale(1.05); /* Flip and slightly scale when opened */
 }
 
 .card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 400px;
-    transform: translateY(-100%);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-.card.open {
-    transform: translateY(0);
+h1, p {
+    color: #000000; /* Black text for readability */
 }
 
+button {
+    background-color: #4C9A4C; /* Dark Forest Green */
+    color: white; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3B7B3B; /* Darker green on hover */
+}
+
+/* Confetti styles */
 .confetti {
     display: none; /* Hidden by default */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('confetti.png'); /* Replace with actual confetti image */
-    background-size: cover;
+    /* Add animation styles here */
 }
 
 .confetti.show {
-    display: block; /* Show when triggered */
+    display: block; /* Show confetti */
+    /* Add your confetti animation styles */
 }
+
+/* Add any confetti animations here */
+
