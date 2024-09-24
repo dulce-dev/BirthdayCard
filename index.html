@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="envelope" onclick="openCard()">
@@ -20,25 +19,22 @@
             <button onclick="openGallery()">📸 View Memories</button>
         </div>
     </div>
-
     <div class="confetti" id="confetti"></div>
-
     <script>
         function openCard() {
-            document.querySelector('.envelope').classList.toggle('open');
+            document.querySelector('.card').classList.toggle('open');
             document.getElementById('confetti').classList.toggle('show');
         }
-
         function playMusic() {
-            window.open('https://link-to-playlist.com', '_blank'); // Replace with your playlist link
+            window.open('https://link-to-playlist.com', '_blank');
         }
-
         function openGallery() {
-            window.open('https://link-to-photo-gallery.com', '_blank'); // Replace with your gallery link
+            window.open('https://link-to-photo-gallery.com', '_blank');
         }
     </script>
 </body>
 </html>
+
 
 
 
