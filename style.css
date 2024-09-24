@@ -1,84 +1,81 @@
 body {
-    background-color: #F5F5DC; /* Light Cream background */
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background-color: #f0e68c;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Center content vertically */
+    height: 100vh;
+    margin: 0;
 }
 
 .envelope {
-    width: 250px;
-    height: 180px;
-    background-color: #3B2B2B; /* Dark Chocolate Brown */
+    width: 200px;
+    height: 120px;
+    background-color: #c2b280; /* Cream color */
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
+    transition: transform 0.5s ease;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    perspective: 1000px; /* Adds perspective for the 3D effect */
-}
-
-.front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hides the back when facing front */
+    text-align: center;
+    color: #333; /* Dark text for readability */
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.front {
-    background-color: #3B2B2B; /* Dark Chocolate Brown */
-    color: white;
-}
-
-.back {
-    background-color: white; /* White for the card */
-    transform: rotateY(180deg); /* Start flipped */
-    padding: 20px;
+    align-items: center;
 }
 
 .envelope.open {
-    transform: rotateY(180deg) scale(1.05); /* Flip and slightly scale when opened */
+    transform: rotateY(180deg);
 }
 
 .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    text-align: center;
+    max-width: 300px;
 }
 
-h1, p {
-    color: #000000; /* Black text for readability */
+h1 {
+    color: #4e5d50; /* Dark forest green */
 }
 
 button {
-    background-color: #4C9A4C; /* Dark Forest Green */
-    color: white; /* White text */
-    border: none;
+    margin-top: 10px;
     padding: 10px;
+    background-color: #4e5d50; /* Dark forest green */
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #3B7B3B; /* Darker green on hover */
-}
-
-/* Confetti styles */
 .confetti {
-    display: none; /* Hidden by default */
-    /* Add animation styles here */
+    display: none; /* Hide confetti by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/confetti.png'); /* Replace with your confetti image path */
+    background-repeat: no-repeat;
+    background-size: 100px 100px; /* Adjust as needed */
 }
 
 .confetti.show {
-    display: block; /* Show confetti */
-    /* Add your confetti animation styles */
+    display: block; /* Show the confetti */
+    animation: fly 2s forwards; /* Trigger the fly animation */
 }
 
-/* Add any confetti animations here */
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px); /* Adjust as needed */
+        opacity: 0; /* Fade out */
+    }
+}
+
 
